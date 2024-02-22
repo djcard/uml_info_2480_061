@@ -1,6 +1,7 @@
-<cftry>
+<cftry><cfdump var="#form#" />
     <cfset addEditFunctions = createObject("addedit") />
     <cfset addEditFunctions.processForms(form)>
+    
     <div class="row">
         <div id="main" class="col-9">
             <cfoutput>#mainForm()#</cfoutput>
@@ -17,6 +18,8 @@
     </cfcatch>
 </cftry>
 
+
+
 <cffunction name="mainForm">
     <cfoutput>
         <form action="#cgi.script_name#?tool=addedit" method="post">
@@ -28,6 +31,9 @@
         </form>
     </cfoutput>
 </cffunction>
+
+
+
 
 <cffunction name="sideNav">
     <cfset allbooks = addEditFunctions.sideNavBooks()>  

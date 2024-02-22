@@ -9,6 +9,7 @@
 
 <body>
     <cfparam name="tool" default="addedit" />
+
     <div class="container">
         <div id="navarea"> NAV </div>
         <div id="mainarea">

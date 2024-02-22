@@ -7,12 +7,12 @@ component {
             qs.addParam(
                name      = "isbn13",
                cfsqltype = "CF_SQL_NVARCHAR",
-               value     = formData.isbn13
+               value     = trim(formData.isbn13)
             );
             qs.addParam(
                name      = "title",
                cfsqltype = "CF_SQL_NVARCHAR",
-               value     = formData.title
+               value     = trim(formData.title)
             );
             qs.execute();
          }  
