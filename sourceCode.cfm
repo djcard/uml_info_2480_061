@@ -33,8 +33,7 @@
         <cfdirectory action="list" directory="#expandPath("management")#" name="managearea" recurse="no">
         <cftry>
             <div id="wrapper" class="container">
-            <legend>Week 5</legend>
-            <div>This week's main objective is to create the structure and first module of the management portion of the site.</div>
+                <div>Work up to the current time</div>
             <div class="row">
                 <div class="col-lg-3">
                     <legend>Main Site</legend>
