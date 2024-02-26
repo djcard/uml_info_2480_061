@@ -23,11 +23,27 @@
 <cffunction name="mainForm">
     <cfoutput>
         <form action="#cgi.script_name#?tool=addedit" method="post">
-            <label for="isbn13">ISBN13:</label>
-            <input type="text" id="isbn13" name="isbn13" value="" placeholder="ISBN13" />
-            <label for="title">Book Title</label> 
-            <input type="text" id="title" name="title" placeholder="Book Title" />  
-            <button type="submit" class="btn btn-primary">Add Book</button>  
+            <div class="form-floating mb-3">
+                <input type="text" id="isbn13" name="isbn13" class="form-control" value="" placeholder="Please enter the ISBN13 of the book" />
+                <label for="isbn13">ISBN 13: </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" id="title" name="title" class="form-control" value="" placeholder="Please enter the title of the book" />
+                <label for="isbn13">Book Title: </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" id="title" name="year" class="form-control" value="" placeholder="Please enter the year of publication of the book" />
+                <label for="isbn13">Year: </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" step="1" id="pages" name="pages" class="form-control" value="" placeholder="Please enter the number of pages the book has" />
+                <label for="isbn13">Number of Pages: </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" step=".1" id="weight" name="weight" class="form-control" value="" placeholder="Please enter the weight of the book" />
+                <label for="isbn13">Weight: </label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Add Book</button>  
         </form>
     </cfoutput>
 </cffunction>
