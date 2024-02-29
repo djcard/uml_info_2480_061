@@ -12,7 +12,9 @@
     <cfparam name="tool" default="addedit" />
 
     <div class="container">
-        <div id="navarea"> NAV </div>
+        <div id="navarea"> 
+            <cfinclude template="navbar.cfm" />
+        </div>
         <div id="mainarea">
             <cfinclude template="#tool#.cfm" />
         </div>
