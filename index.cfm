@@ -10,6 +10,7 @@
 </head>
 <body>
 <div id="wrapper" class="container">
+        <a href="sourceCode.cfm">Check out the Source Code for this project (Honor System :) )</a>
     <cfinclude template="header.cfm" />
     <div id="horizontalnav" class="row">
         <cfinclude template="horizontalNav.cfm" />
