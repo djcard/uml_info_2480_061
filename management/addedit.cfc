@@ -2,10 +2,12 @@ component {
 
     function processForms(required struct formData) {
         if (formData.keyExists('isbn13') && formData.keyExists('title') && formData.title.len() > 0) {
+
             if(formdata.keyExists("uploadImage") && formData.uploadImage.len()){
                 arguments.formData.image = uploadBookCover();
             }
 
+            writeDump(formData);   
 
             var qs = new query(datasource = application.dsource);
             qs.setSql('if NOT EXISTS( SELECT * FROM books WHERE isbn13=:isbn13)
@@ -97,7 +99,13 @@ component {
     }
 
     function uploadBookCover(){
-        var imageData = fileUpload(expandPath("../images/"),"uploadImage","*","makeUnique");
+        var imageData = fileUpload(
+            expandPath("../images/"),
+            "uploadImage",
+            "*",
+            "makeUnique"
+        );
+        writeDump(imageData); 
         return imageData.serverFile;
      }
 }
