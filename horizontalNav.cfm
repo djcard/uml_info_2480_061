@@ -29,10 +29,19 @@
             </form>
         
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#Cgi.SCRIPT_NAME#?p=login">Login</a>
-                </li>
-
+                <cfif session.user.isLoggedIn>
+                    <li class="nav-item"> 
+                        <span class="nav-link">Welcome #session.user.firstname# #session.user.lastname#</span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Cgi.SCRIPT_NAME#?p=logoff">Logout</a>
+                    </li>
+                    
+                <cfelse>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Cgi.SCRIPT_NAME#?p=login">Login</a>
+                    </li>
+                </cfif>
             </ul>
         </cfoutput>
     </div>
